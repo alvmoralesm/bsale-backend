@@ -19,8 +19,10 @@ app.use(errorHandler); //we pass the error handler previously built as a middlew
 
 //routes
 const productRoutes = require("./routes/products");
+const categoryRoutes = require("./routes/categories");
 
 app.use(`${api}/products`, productRoutes);
+app.use(`${api}/categories`, categoryRoutes);
 
 //server listening in the defined port, specified in the variable/constant declaration section
 app.listen(port, () => console.log(`Listening on port: ${port}`));
