@@ -21,3 +21,14 @@ module.exports.getCategoryById = catchAsync(async (req, res) => {
     res.send(result);
   });
 });
+
+module.exports.getProductsByCategory = catchAsync(async (req, res) => {
+  const categoryId = parseInt(req.params.id); //we assign the param passed in the url to a constant for cleaner use
+  const sql = "SELECT * FROM product WHERE category=?"; //we select everything from the product table where the category equals to ?
+
+  //we pass the string defined in the constant and the categoryId provided in the url (to return only the product instances that matches the the categoryId passed in the url) as a query and return the response as a JSON Array
+  conn.query(sql, [categoryId], (err, result) => {
+    if (err || !result) res.status(500).send({ success: false });
+    res.send(result);
+  });
+});
