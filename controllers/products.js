@@ -26,10 +26,14 @@ module.exports.searchProduct = catchAsync(async (req, res) => {
   const searchValue = req.body.searchValue.trim(); //we define our search value and trim it just in case it comes with whitespaces
   const categoryId = req.body.categoryId; //we define our categoryId for filtering
 
-  const sql = "SELECT * FROM product WHERE category=? AND name REGEXP ?  "; //we select everything from the product table where the name passed by the user will try to match the entries
+  let sql = "SELECT * FROM product WHERE name REGEXP ? AND  category=?"; //we select everything from the product table where the name passed by the user will try to match the entries
 
+  //we as if there is no category, so we can return all products without considering the category
+  if (categoryId == "" || !categoryId) {
+    sql = "SELECT * FROM product WHERE name REGEXP ?  ";
+  }
   //we pass the string defined in the constant and the productId provided in the url (to return only the instance that matches the id) as a query and return the response as a JSON Object
-  conn.query(sql, [categoryId, searchValue], (err, result) => {
+  conn.query(sql, [searchValue, categoryId], (err, result) => {
     if (err || !result) res.status(500).send({ success: false });
     res.send(result);
   });
