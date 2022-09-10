@@ -2,10 +2,18 @@ const conn = require("./../db/dbConn");
 const catchAsync = require("./../utils/catchAsync");
 
 module.exports.getProducts = catchAsync(async (req, res) => {
-  const sql = "SELECT * FROM product ORDER BY name ASC"; //we select everything from product and we define it as a constant
+  const orderBy = req.query.orderBy;
+  const sort = req.query.sort;
+  let sql = `SELECT * FROM product ORDER BY name ASC`; //we inititalize the default query
+
+  //we evaluate if the client passed paramateres in the query for the sorting if it's true, we pass the filters
+  if (orderBy && sort) {
+    sql = `SELECT * FROM product ORDER BY ${orderBy} ${sort}`; //we poblate the sql string with a new query if the condition is true
+  }
 
   //we pass the string defined in the constant as a query and return the response as a JSON Array
   conn.query(sql, (err, result) => {
+    console.log(sql);
     if (err) res.status(500).send({ success: false });
     res.send(result);
   });

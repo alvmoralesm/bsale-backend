@@ -24,7 +24,14 @@ module.exports.getCategoryById = catchAsync(async (req, res) => {
 
 module.exports.getProductsByCategory = catchAsync(async (req, res) => {
   const categoryId = parseInt(req.params.id); //we assign the param passed in the url to a constant for cleaner use
-  const sql = "SELECT * FROM product WHERE category=? ORDER BY name ASC"; //we select everything from the product table where the category equals to ?
+  const orderBy = req.query.orderBy;
+  const sort = req.query.sort;
+  let sql = "SELECT * FROM product WHERE category=? ORDER BY name ASC"; //we inititalize the default query
+
+  //we evaluate if the client passed paramateres in the query for the sorting if it's true, we pass the filters
+  if (orderBy && sort) {
+    sql = `SELECT * FROM product WHERE category=? ORDER BY ${orderBy} ${sort}`; //we poblate the sql string with a new query if the condition is true
+  }
 
   //we pass the string defined in the constant and the categoryId provided in the url (to return only the product instances that matches the the categoryId passed in the url) as a query and return the response as a JSON Array
   conn.query(sql, [categoryId], (err, result) => {
