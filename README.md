@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="" rel="noopener">
- <img style="background-color: #ff5c1a; border-radius: 5px; "  src="https://dojiw2m9tvv09.cloudfront.net/4/8/img-logos-logo-bsale-blanco-mobile.png?2904" alt="Project logo"></a>
+
+ <img style="background-color: #ff5c1a; border-radius: 5px; "  src="https://dojiw2m9tvv09.cloudfront.net/4/8/img-logos-logo-bsale-blanco-mobile.png?2904" alt="Project logo">
 </p>
 <h3 align="center">bsale-backend</h3>
 
@@ -24,11 +24,13 @@
 - [Usage](#usage)
 - [Deployed](#deployed)
 - [Built Using](#built_using)
+- [Why did I use this technologies?](#why_this)
+- [Database](#database)
 - [Authors](#authors)
 
 ## 🧐 About <a name = "about"></a>
 
-This endpoint was developed as part of BSale the hiring process.
+This endpoint was developed as part of the BSale hiring process. The main objective is to the determine if I have the knowledge/skills to retrieve data from a database building a backend (API REST) that interacts with the database provided.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -44,7 +46,7 @@ npm i
 
 ## Prerequisites <a name = "prerequisites"></a>
 
-The only requirement is that you need to have installed <a href="https://nodejs.org/en/">Node.js</a> in your local machine.
+You'll need to have installed <a href="https://nodejs.org/en/">Node.js</a> in your local machine. You''ll also need the database credentials from BSale.
 
 ## Final steps <a name = "final-steps"></a>
 
@@ -308,6 +310,19 @@ This API has calls to the Product and Category tables:
 
 - [Express](https://expressjs.com/) - Server Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
+
+## Why did I use this technologies? <a name = "why_this"></a>
+
+<p style="font-weight: normal; font-size: 2.2vh"><b>Node.js:</b> I used Node.js because is my main technology for building backends. I feel more comfortable using Node.js than any other server environment/framework. This is also because I completed a Web Development Bootcamp that used Node.js to build the backend.</p>
+
+<p style="font-weight: normal; font-size: 2.2vh"><b>Express.js:</b> You can build a backends only using Node.js but using it in conjunction with Express.js simplifies the job and makes the code easier to read. It is also easy to learn and reliable. As mentioned before this is also because I completed a Web Development Bootcamp that used Node.js with Express.js to build the backend.</p>
+
+<p style="font-weight: normal; font-size: 2.2vh">The last and main reason to consider is that Javascript is the language that I'm more proficient with.</p>
+
+## Database <a name = "database"></a>
+
+<p style="font-weight: normal; font-size: 2.2vh">The database engine is <b>MySQL</b> and was provided by BSale. The tables  used in this API are the following:</p>
+ <img   src="https://i.imgur.com/HHagO17.png" alt="Database Tables">
 
 ## ✍️ Authors <a name = "authors"></a>
 
