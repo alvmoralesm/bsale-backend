@@ -22,6 +22,7 @@
 - [Prerequisites](#prerequisites)
 - [Final steps](#final-steps)
 - [Usage](#usage)
+- [Deployed](#deployed)
 - [Built Using](#built_using)
 - [Authors](#authors)
 
@@ -298,6 +299,10 @@ This API has calls to the Product and Category tables:
     }
 ]
 ```
+
+## Deployed <a name = "deployed"></a>
+
+<p style="font-weight: normal; font-size: 2.2vh">This API was deployed using <a href="https://www.heroku.com/">Heroku</a> you can access the deployed API using the following link <a href="https://www.heroku.com/">https://bsale-api-am.herokuapp.com/</a>. Remember to pass the parameters to the URL for the requests as specified in the Usage section.</p>
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
