@@ -142,7 +142,7 @@ This API has calls to the Product and Category tables:
 </br>
 <p style="font-weight: normal; font-size: 2.2vh">Search products = /api/v1/products/search/</p>
 
-<p style="font-weight: normal; font-size: 2.2vh">Here need to pass the following JSON structure as body parameters:</p>
+<p style="font-weight: normal; font-size: 2.2vh">Here we need to pass the following JSON structure as body parameters:</p>
 
 ```
 {
