@@ -41,11 +41,11 @@ git clone https://github.com/alvmoralesm/bsale-backend.git
 npm i
 ```
 
-### Prerequisites <a name = "prerequisites"></a>
+## Prerequisites <a name = "prerequisites"></a>
 
 The only requirement is that you need to have installed <a href="https://nodejs.org/en/">Node.js</a> in your local machine.
 
-### Final steps <a name = "final-steps"></a>
+## Final steps <a name = "final-steps"></a>
 
 As final steps we'll need to setup our environment variables. First wel'll need to create our .env file that'll contain our environment variables. Lastly, we insert the variables in the file that we just created. The environment variables are the following:
 
