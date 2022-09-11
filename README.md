@@ -21,7 +21,7 @@
 - [Getting Started](#getting_started)
 - [Prerequisites](#prerequisites)
 - [Final steps](#final-steps)
-- [Usage](#final-steps)
+- [Usage](#usage)
 - [Built Using](#built_using)
 - [Authors](#authors)
 
