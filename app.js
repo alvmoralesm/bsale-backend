@@ -7,7 +7,7 @@ const { errorHandler } = require("./utils/errorHandler");
 require("dotenv/config"); //needed for the use of environment variables
 
 //variable/constant definition
-const port = 3001;
+const port = process.env.PORT || 3000;
 const api = process.env.API_URL;
 
 //middlewares used before-routes, so considering the cycle this loads first then the routes
